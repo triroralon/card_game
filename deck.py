@@ -35,4 +35,4 @@ bob = Player("Bob")
 bob.draw(Deck)
 bob.showHand()
 
-Deck.show_deck() 
+Deck.show_deck()
