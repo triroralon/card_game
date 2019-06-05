@@ -1,5 +1,7 @@
 from deck import Deck
-"im the best"
+
+print("hello world")
+
 if __name__ == "__main__":
     
     choice = input
