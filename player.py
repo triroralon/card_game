@@ -12,3 +12,5 @@ class Player:
             # print(card)
             card.show_card()
 
+    def __str__(self):
+        return self.name

@@ -1,6 +1,5 @@
-from cards import *
+from cards import Card
 from random import randint
-from player import *
 
 class Deck:
     def __init__(self):
@@ -8,18 +7,18 @@ class Deck:
         self.suits = ["Spades","Hearts","Clubs","Diamonds"]
         self.faces = ["Ace","King","Queen","Jack","10","9","8","7","6","5","4","3","2"]
         self.build()
-      
+
     def build(self):
         for s in self.suits:
             for f in self.faces:
                 self.cards.append(Card(f, s))
-    
+
     def show_deck(self):
         for c in range (len(self.cards)):
             # print(self.cards[c])
             self.cards[c].show_card()
             # c.show_card()
-    
+
     def shuffle(self):
         for i in range(len(self.cards) - 1, 0, -1):
             r = randint(0,i)
@@ -27,12 +26,3 @@ class Deck:
 
     def drawCard(self):
         return self.cards.pop()
-    
-Deck = Deck()
-Deck.shuffle()
-
-bob = Player("Bob")
-bob.draw(Deck)
-bob.showHand()
-
-Deck.show_deck()
